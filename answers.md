@@ -179,3 +179,19 @@ Phần A:
             type="checkbox": Dùng cho các tùy chọn có thể bật/tắt độc lập (ví dụ: "Bật chế độ đọc ban đêm", "Ẩn thanh menu bên trái").
 
             type="hidden": Đây là loại input cực kỳ quan trọng mà người dùng không thấy được trên màn hình. Nó dùng để gửi kèm các mã bảo mật (token) hoặc ID phiên làm việc để đảm bảo form được gửi đi một cách an toàn. PBT_01/screenshots/PhanB_bai4.3.png     
+    Phần C:
+        Đoạn văn phản biện:
+        Chào đồng nghiệp, mình hiểu cảm giác của bạn. Khi chạy deadline hay làm bài tập lớn, dùng <div> cho nhanh rồi "đắp" CSS vào là xong chuyện. Nhưng với góc độ một sinh viên Kỹ thuật phần mềm , mình thấy việc bỏ qua Semantic HTML giống như xây nhà mà chỉ chú trọng sơn tường mà quên mất khung xương vậy. Có hai lý do kỹ thuật cực kỳ quan trọng mà mình đã rút ra được:
+
+        Đầu tiên là SEO (Tối ưu hóa công cụ tìm kiếm). Google không "nhìn" trang web như chúng ta; nó dùng các con bot để đọc cấu trúc. Nếu mọi thứ đều là <div>, con bot sẽ bối rối không biết đâu là nội dung chính, đâu là phần phụ. Dùng thẻ <main>, <article> hay <h1> giống như việc bạn gắn nhãn rõ ràng, giúp trang web dễ dàng leo lên top tìm kiếm hơn. Thứ hai là Accessibility (Khả năng tiếp cận). Một Tester giỏi sẽ luôn quan tâm đến người dùng khiếm thị sử dụng trình đọc màn hình (Screen Reader). Trình đọc sẽ thông báo "Đây là một khu vực điều hướng" khi thấy thẻ <nav>, nhưng sẽ hoàn toàn im lặng nếu đó chỉ là một thẻ <div>.
+
+        Hãy nhìn vào ví dụ cụ thể về Breadcrumb. Nếu dùng <div> lồng nhau, trình duyệt chỉ coi đó là các khối văn bản rời rạc. Nhưng nếu dùng:
+
+        HTML
+        <nav aria-label="breadcrumb">
+            <ol>
+                <li><a href="/">Trang chủ</a></li>
+                <li aria-current="page">Sản phẩm</li>
+            </ol>
+        </nav>
+        Trình duyệt sẽ hiểu ngay đây là một danh sách có thứ tự và đang ở trang nào. Điều này giúp cấu trúc DOM sạch sẽ và cực kỳ dễ bảo trì.Tất nhiên, mình không cực đoan đến mức bài trừ <div>. Thực tế, <div> vẫn là "vua" trong các trường hợp phục vụ mục đích trình bày (styling). Khi mình cần tạo một lớp bao (wrapper) để căn giữa nội dung bằng Flexbox hoặc tạo một khối trang trí không mang ý nghĩa nội dung, thì <div> chính là lựa chọn phù hợp nhất vì nó trung lập.   
