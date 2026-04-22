@@ -1,9 +1,10 @@
 Phần A:
     Câu A1(5đ) — HTTP & Browser
-    Câu 1:5 Bước Chính từ DNS Lookup đến Render:
+
+        Câu 1:5 Bước Chính từ DNS Lookup đến Render:
             Bước 1: DNS Lookup
                 Trình duyệt chuyển đổi domain shopee.vn thành IP address của server thực tế
-                Nguồn: tuan_1_html5/01_introduction_html_universe.md - Phần "1.2. HTTP — Ngôn ngữ để Client và Server hiểu nhau" (liên quan đến kiến trúc Client-Server)
+                Nguồn: tuan_1_html5/01_introduction_html_universe.md - Phần "1.2. HTTP — Ngôn  ngữ để Client và Server hiểu nhau" (liên quan đến kiến trúc Client-Server)
             Bước 2:Kết nối mạng & Gửi HTTP Request
                 Request của bạn xuất phát từ laptop → qua router WiFi → qua ISP (nhà mạng) → chạy qua cáp quang xuyên đất → đến Data Center của Shopee
                 Nguồn: tuan_1_html5/01_introduction_html_universe.md - Phần "Cuộc Hành Trình 0.3 Giây Xuyên Đại Dương":
@@ -118,25 +119,26 @@ Phần A:
         <div>Hộp 3</div>	Kiểu:Block	
         ->Xuống dòng mới → chiếm cả dòng.
     Câu A4:
-    Sự khác nhau cơ bản:
-    Element	    Vai Trò 	    Nội Dung	            Hiển Thị
-    <thead>	    Đầu bảng	    Tiêu đề cột (header)	In đậm, nền xám
-    <tbody>	    Thân bảng	    Dữ liệu chính	        Text bình thường
-    <tfoot>	    Chân bảng	    Tổng kết, summary	    Có thể highlight
-    Tại sao KHÔNG NÊN dùng table để tạo layout trang web?
-        Lỗi 1: SEO Bị Suy Giảm Nghiêm Trọng
-        Vấn đề:
-            Table được thiết kế cho dữ liệu dạng bảng, không phải layout
-            Google bot đọc table từ trái → phải, trên → dưới
-            Nếu dùng table làm layout → nội dung bị xáo trộn khi bot đọc.
-        Lỗi 2: Trang Web KHÔNG Responsive (Mobile Unfriendly)
-        Vấn đề:
-            Table có chiều rộng cố định từ thuộc tính width
-            Trên mobile, table không thể scale down → user phải cuộn ngang
-            CSS Grid/Flexbox có thể responsive dễ dàng    
-        Lỗi 3: Code HTML Phức Tạp & Khó Bảo Trì
-        Vấn đề:
-            Table layout cần nhiều nested <tr><td> để tạo layout
-            Mỗi khi thay đổi design → phải sửa cả HTML lẫn CSS
-            Dễ gây lỗi alignment khi update.
+
+        Sự khác nhau cơ bản:
+        Element	    Vai Trò 	    Nội Dung	            Hiển Thị
+        <thead>	    Đầu bảng	    Tiêu đề cột (header)	In đậm, nền xám
+        <tbody>	    Thân bảng	    Dữ liệu chính	        Text bình thường
+        <tfoot>	    Chân bảng	    Tổng kết, summary	    Có thể highlight
+        Tại sao KHÔNG NÊN dùng table để tạo layout trang web?
+            Lỗi 1: SEO Bị Suy Giảm Nghiêm Trọng
+            Vấn đề:
+                Table được thiết kế cho dữ liệu dạng bảng, không phải layout
+                Google bot đọc table từ trái → phải, trên → dưới
+                Nếu dùng table làm layout → nội dung bị xáo trộn khi bot đọc.
+            Lỗi 2: Trang Web KHÔNG Responsive (Mobile Unfriendly)
+            Vấn đề:
+                Table có chiều rộng cố định từ thuộc tính width
+                Trên mobile, table không thể scale down → user phải cuộn ngang
+                CSS Grid/Flexbox có thể responsive dễ dàng    
+            Lỗi 3: Code HTML Phức Tạp & Khó Bảo Trì
+            Vấn đề:
+                Table layout cần nhiều nested <tr><td> để tạo layout
+                Mỗi khi thay đổi design → phải sửa cả HTML lẫn CSS
+                Dễ gây lỗi alignment khi update.
                     
