@@ -141,4 +141,15 @@ Phần A:
                 Table layout cần nhiều nested <tr><td> để tạo layout
                 Mỗi khi thay đổi design → phải sửa cả HTML lẫn CSS
                 Dễ gây lỗi alignment khi update.
-                    
+    Phần B: 
+        Bài 3:Debug html
+            Lỗi 1: Dòng 1 — Thiếu khai báo kiểu tài liệu đầy đủ — Cách sửa: Sửa thành <!DOCTYPE html>.
+            Lỗi 2: Dòng 2 — Thiếu thuộc tính ngôn ngữ cho thẻ html — Cách sửa: Sửa thành <html lang="vi">.
+            Lỗi 3: Dòng 3 — Thẻ <title> chưa có thẻ đóng — Cách sửa: Thêm </title> sau chữ "Trang web".
+            Lỗi 4: Dòng 4 — Giá trị charset không chuẩn và đặt sai vị trí (nên đặt đầu thẻ head) — Cách sửa: Sửa thành <meta charset="UTF-8">.
+            Lỗi 5: Dòng 6 — Sai thẻ đóng cho tiêu đề <h1> — Cách sửa: Sửa <h1>Welcome to ShopTLU<h1> thành <h1>Welcome to ShopTLU</h1>.
+            Lỗi 6: Dòng 10 — Thẻ <a> đầu tiên chưa đóng đúng — Cách sửa: Sửa <a> ở cuối dòng thành </a>.
+            Lỗi 7: Dòng 10, 11 — Đường dẫn href thiếu phần mở rộng .html — Cách sửa: Sửa thành href="home.html" và href="products.html".
+            Lỗi 8: Dòng 18 — Thẻ <img> thiếu thuộc tính alt và dấu ngoặc kép cho src — Cách sửa: Sửa thành <img src="iphone.jpg" alt="iPhone 16 Pro">.
+            Lỗi 9: Dòng 20 — Đóng thẻ sai thứ tự (thẻ <b> đóng sau thẻ <p>) — Cách sửa: Sửa thành <p>Giá: <b>25.990.000đ</b></p>.
+            Lỗi 10: Dòng 36 — Sử dụng thẻ <main> lần thứ hai (một trang web chỉ được có duy nhất một thẻ <main>) — Cách sửa: Thay thẻ <main> này thành thẻ <aside> vì đây là nội dung phụ (Sidebar).
