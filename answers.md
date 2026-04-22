@@ -153,3 +153,29 @@ Phần A:
             Lỗi 8: Dòng 18 — Thẻ <img> thiếu thuộc tính alt và dấu ngoặc kép cho src — Cách sửa: Sửa thành <img src="iphone.jpg" alt="iPhone 16 Pro">.
             Lỗi 9: Dòng 20 — Đóng thẻ sai thứ tự (thẻ <b> đóng sau thẻ <p>) — Cách sửa: Sửa thành <p>Giá: <b>25.990.000đ</b></p>.
             Lỗi 10: Dòng 36 — Sử dụng thẻ <main> lần thứ hai (một trang web chỉ được có duy nhất một thẻ <main>) — Cách sửa: Thay thẻ <main> này thành thẻ <aside> vì đây là nội dung phụ (Sidebar).
+        Bài 4:
+            4.1
+            Ô khoanh tròn màu dương là thẻ semantic ,thẻ <html> với lang="vi" khai báo ngôn ngữ trang
+            Ô khoanh tròn màu đen là thẻ semantic ,thẻ <main> chứa nội dung chính của trang đăng nhập
+            Ô khoanh tròn màu xanh lá cây là thẻ semantic ,   thẻ <script> với type="text,javascript" định dạng rõ ràng
+            Hình ảnh:   PBT_01/screenshots/PhanB_bai4.1.png
+            4.2
+            1.Table chứa nội dung:
+            Nội dung: Nó chứa danh sách các liên kết liên quan đến chủ đề "Diễn viên" (như bạn thấy trên thanh địa chỉ là wiki/Diễn_viên).
+            Chức năng: Giúp người đọc nhanh chóng tìm thấy các bài viết cùng chuyên mục như: Nghề nghiệp trong ngành phim, Kỹ thuật diễn xuất, Các hội đoàn diễn viên...
+
+            2.Có dùng <thead> và <tbody> không?
+            Dựa vào quy chuẩn của Wikipedia và những gì hiển thị trong tab Elements:
+            <tbody>: CHẮC CHẮN CÓ. Hầu như tất cả các bảng trên Wikipedia đều tự động bọc toàn bộ hàng (<tr>) vào trong một thẻ <tbody>. Nếu bạn bấm vào dấu mũi tên nhỏ ở thẻ <table> trong ảnh, bạn sẽ thấy thẻ <tbody> hiện ra ngay lập tức.
+            <thead>: CÓ THỂ KHÔNG. Các bảng điều hướng kiểu này thường chỉ dùng thẻ <tr> kết hợp với thẻ <th> (ô tiêu đề) để tạo hàng tiêu đề luôn, thay vì chia ra một khu vực <thead> riêng biệt. PBT_01/screenshots/PhanB_bai4.2.png
+            4.3
+            Form đó có action và method gì?
+            Method: Thường là POST. Vì đây là form dùng để thay đổi cài đặt người dùng hoặc giao diện, việc dùng POST giúp bảo mật dữ liệu và cho phép gửi lượng dữ liệu lớn hơn so với GET.
+
+            Action: Thường trỏ đến một đường dẫn xử lý nội bộ của Wikipedia (ví dụ: /w/api.php hoặc chính URL hiện tại với các tham số truy vấn). Mục đích là gửi các lựa chọn của bạn về máy chủ để lưu lại cấu trúc giao diện mới.
+            Input types nào được dùng? 
+            type="radio": Được dùng cho các lựa chọn mà bạn chỉ được chọn một (ví dụ: chọn giữa "Cỡ chữ nhỏ", "Cỡ chữ tiêu chuẩn" hoặc "Cỡ chữ lớn").
+
+            type="checkbox": Dùng cho các tùy chọn có thể bật/tắt độc lập (ví dụ: "Bật chế độ đọc ban đêm", "Ẩn thanh menu bên trái").
+
+            type="hidden": Đây là loại input cực kỳ quan trọng mà người dùng không thấy được trên màn hình. Nó dùng để gửi kèm các mã bảo mật (token) hoặc ID phiên làm việc để đảm bảo form được gửi đi một cách an toàn. PBT_01/screenshots/PhanB_bai4.3.png     
