@@ -195,3 +195,77 @@ Phần A:
             </ol>
         </nav>
         Trình duyệt sẽ hiểu ngay đây là một danh sách có thứ tự và đang ở trang nào. Điều này giúp cấu trúc DOM sạch sẽ và cực kỳ dễ bảo trì.Tất nhiên, mình không cực đoan đến mức bài trừ <div>. Thực tế, <div> vẫn là "vua" trong các trường hợp phục vụ mục đích trình bày (styling). Khi mình cần tạo một lớp bao (wrapper) để căn giữa nội dung bằng Flexbox hoặc tạo một khối trang trí không mang ý nghĩa nội dung, thì <div> chính là lựa chọn phù hợp nhất vì nó trung lập.   
+
+
+Phiếu trả lời bài tập tuần 2
+    Phần A:Kiểm tra đọc hiểu 
+
+        Câu A1:10 input types khác nhau trong HTML5:       
+
+        type="email" → Ô nhập văn bản, tự kiểm tra định dạng phải có dấu @ → Dùng cho form đăng ký tài khoản.
+
+        type="password" → Ô nhập ẩn ký tự (hiện dấu chấm/sao) để bảo mật → Dùng cho ô nhập mật khẩu.
+
+        type="number" → Ô nhập số kèm nút tăng/giảm, chặn nhập chữ → Dùng để chọn số lượng sản phẩm.
+
+        type="tel" → Ô nhập văn bản tối ưu bàn phím số trên điện thoại → Dùng nhập số điện thoại nhận hàng.
+
+        type="date" → Hiển thị bộ chọn lịch (Calendar) trực quan → Dùng chọn ngày sinh khách hàng.
+
+        type="checkbox" → Ô vuông cho phép chọn nhiều lựa chọn cùng lúc → Dùng cho bộ lọc (chọn nhiều thương hiệu).
+
+        type="radio" → Nút tròn chỉ cho phép chọn 1 trong nhóm → Dùng chọn phương thức thanh toán.
+
+        type="file" → Nút bấm để tải tệp tin từ thiết bị lên → Dùng để đăng ảnh đánh giá sản phẩm.
+
+        type="search" → Ô nhập văn bản có nút xóa nhanh (x) nội dung → Dùng cho thanh tìm kiếm hàng hóa.
+
+        type="range" → Thanh trượt chọn giá trị trong một khoảng → Dùng để lọc sản phẩm theo tầm giá.
+
+        Câu A2:
+
+        Trường hợp 1: <input type="text" required value="">
+        KHÔNG CHO PHÉP SUBMIT — Hiện thông báo lỗi
+
+        TẠI SAO:
+
+        Attribute required bắt buộc phải có giá trị
+        value="" là rỗng → vi phạm constraint
+        Browser thông báo "Please fill out this field"
+
+        Trường hợp 2: <input type="email" value="abc">
+        KHÔNG CHO PHÉP SUBMIT — Hiện thông báo lỗi
+
+        TẠI SAO:
+
+        type="email" tự động validate format email
+        "abc" không có @ → không phải email hợp lệ
+        Browser sẽ hiện: "Please enter a valid email address"
+        Browser thông báo "Please include an '@' in the email address. 'abc' is missing an '@'
+
+        Trường hợp 3: <input type="number" min="1" max="10" value="15">
+        KHÔNG CHO PHÉP SUBMIT — Hiện thông báo lỗi
+
+        TẠI SAO:
+
+        type="number" với min="1" max="10" → giá trị phải trong khoảng [1, 10]
+        Giá trị 15 vượt quá max (15 > 10)
+        Browser thông báo "Value must be less than or equal to 10"
+
+        Trường hợp 4: <input type="text" pattern="[0-9]{10}" value="abc123">
+        KHÔNG CHO PHÉP SUBMIT — Hiện thông báo lỗi
+
+        TẠI SAO:
+
+        pattern="[0-9]{10}" = regex yêu cầu 10 chữ số liên tiếp
+        "abc123" = 6 ký tự gồm chữ + số → không khớp pattern
+        Browser thông báo "Please match the requested format"
+
+        Trường hợp 5: <input type="password" minlength="8" value="123">
+        KHÔNG CHO PHÉP SUBMIT — Hiện thông báo lỗi
+
+        TẠI SAO:
+
+        minlength="8" → bắt buộc tối thiểu 8 ký tự
+        "123" có độ dài 3 ký tự < 8 → vi phạm constraint.
+        

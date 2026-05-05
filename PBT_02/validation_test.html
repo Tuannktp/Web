@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Test HTML5 Validation</title>
+    <style>
+        /* Thêm một chút CSS để dễ nhìn khi làm báo cáo */
+        form { margin: 20px; line-height: 2; }
+        .input-group { margin-bottom: 15px; }
+        label { display: inline-block; width: 200px; font-weight: bold; }
+        input:invalid { border: 2px solid red; } /* Hiện viền đỏ khi nhập sai */
+    </style>
+</head>
+<body>
+
+    <h2>Kiểm tra lỗi nhập liệu (HTML5 Validation)</h2>
+
+    <form action="#"> <!-- Thẻ form bắt buộc phải có để nút Submit hoạt động -->
+
+        <div class="input-group">
+            <label>Trường hợp 1 (Để trống):</label>
+            <input type="text" required value=""> 
+            <!-- required: Sẽ báo lỗi nếu không nhập gì -->
+        </div>
+
+        <div class="input-group">
+            <label>Trường hợp 2 (Sai Email):</label>
+            <input type="email" value="abc">
+            <!-- email: Sẽ báo lỗi vì "abc" thiếu ký tự @ -->
+        </div>
+
+        <div class="input-group">
+            <label>Trường hợp 3 (Quá số lượng):</label>
+            <input type="number" min="1" max="10" value="15">
+            <!-- max="10": Sẽ báo lỗi vì giá trị 15 lớn hơn mức cho phép -->
+        </div>
+
+        <div class="input-group">
+            <label>Trường hợp 4 (Sai Pattern):</label>
+            <input type="text" pattern="[0-9]{10}" value="abc123">
+            <!-- pattern: Yêu cầu đúng 10 chữ số, nhập chữ sẽ báo lỗi -->
+        </div>
+
+        <div class="input-group">
+            <label>Trường hợp 5 (Quá ngắn):</label>
+            <input type="password" minlength="8" value="123">
+            <!-- minlength="8": Sẽ báo lỗi vì "123" chỉ có 3 ký tự -->
+        </div>
+
+        <hr>
+        <!-- Nút bấm quan trọng nhất để kích hoạt Validation -->
+        <button type="submit">NHẤN VÀO ĐÂY ĐỂ SUBMIT</button>
+        
+    </form>
+
+</body>
+</html>
